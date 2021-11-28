@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="coursera.js"></script>
+    <link rel="stylesheet" href="coursera.css">
+    <title>Web App – Simple Interest Calculator</title>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <h1>Simple Interest Calculator</h1>
+        </header>
+        <div class="amount">
+            Amount <span class="amount_value"><input type="number"  id="principal" placeholder="Enter the amount"></span>
+        </div>
+        <div class="range-slider">
+            Interest Rate <span class="range_value"><input class="range-slider__range" type="range" min="1.0" max="20.0"
+                    step="0.1" value="4.5" id="rate"  onmousemove="show_value(this.value);" onchange="show_value(this.value);"></span>
+            <span id="slider_value">4.5%</span>
+        </div>
+
+        <div class="year1">
+            No. of Years
+        </div>
+        <div class="year">
+            <label for="years"></label>
+            <select name="Years" id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select>
+
+        </div>
+
+        <div class="button">
+            <button onclick="compute()">Compute Interest</button>
+        </div>
+
+        <pre id="result" class="in">
+
+
+
+        </pre>
+        <footer>
+            <span>&#9400;</span> Everyone Can Get Rich
+        </footer>
+    </div>
+</body>
+
+</html>
